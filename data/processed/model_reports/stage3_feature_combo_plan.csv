@@ -1,0 +1,15 @@
+plan_order,combo_id,role,feature_ids,feature_count,feature_dim,reason
+1,S3_00_F3_hog,best_single_anchor,F3_hog,1,1764,Stage 2 tuned best single feature; validation macro-F1 0.5612.
+2,S3_01_F3_hog__F1_color,one_step_addition,F3_hog+F1_color,2,2803,Color had the best minority recall mean in Stage 2.
+3,S3_02_F3_hog__F2_texture,one_step_addition,F3_hog+F2_texture,2,1794,"Texture is low-dimensional and stable, with good macro-F1."
+4,S3_03_F3_hog__F5_gist,one_step_addition,F3_hog+F5_gist,2,1828,GIST adds compact global structure information.
+5,S3_04_F3_hog__F6_bof,one_step_addition,F3_hog+F6_bof,2,2020,BoF is research-backed and helped battery/biological recall.
+6,S3_05_F3_hog__F1_color__F2_texture,adaptive_candidate,F3_hog+F1_color+F2_texture,3,2833,Combines strongest edge feature with color and texture complements.
+7,S3_06_F3_hog__F1_color__F5_gist,adaptive_candidate,F3_hog+F1_color+F5_gist,3,2867,Tests color plus global layout without the texture block.
+8,S3_07_F3_hog__F2_texture__F5_gist,adaptive_candidate,F3_hog+F2_texture+F5_gist,3,1858,Tests low-dimensional texture and global structure complements.
+9,S3_08_F3_hog__F1_color__F2_texture__F5_gist,adaptive_candidate,F3_hog+F1_color+F2_texture+F5_gist,4,2897,Main compact fusion candidate before adding BoF.
+10,S3_09_F3_hog__F1_color__F2_texture__F5_gist__F6_bof,adaptive_candidate,F3_hog+F1_color+F2_texture+F5_gist+F6_bof,5,3153,Adds local keypoint histogram to the compact fusion candidate.
+11,S3_10_F1_color__F2_texture,reference_combo,F1_color+F2_texture,2,1069,Lightweight color+texture reference from the original C7 idea.
+12,S3_11_F1_color__F2_texture__F5_gist,reference_combo,F1_color+F2_texture+F5_gist,3,1133,Lightweight color+texture+GIST reference without HOG.
+13,S3_12_C10_reference_no_bof,reference_combo,F1_color+F2_texture+F4_shape+F5_gist+F3_hog,5,2909,Original C10-style all handcrafted features except BoF.
+14,S3_13_C11_reference_full_handcrafted,reference_combo,F1_color+F2_texture+F4_shape+F5_gist+F3_hog+F6_bof,6,3165,Original C11-style full handcrafted feature reference.

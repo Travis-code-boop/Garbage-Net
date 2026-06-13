@@ -1,0 +1,51 @@
+{
+  "num_features": 1024,
+  "num_feature_group_entries": 1024,
+  "feature_groups": [
+    "pixel_gray"
+  ],
+  "train": {
+    "shape": [
+      8581,
+      1024
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 1.0
+  },
+  "validation": {
+    "shape": [
+      1839,
+      1024
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 1.0
+  },
+  "test": {
+    "shape": [
+      1839,
+      1024
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 1.0
+  },
+  "output_path": "data/features/F0_pixels/F0_pixels_gray_1024.npz",
+  "elapsed_seconds_total_script": 16.097,
+  "params": {
+    "feature_id": "F0_pixels",
+    "pixel_size": [
+      32,
+      32
+    ],
+    "value_scale": "uint8 divided by 255",
+    "source_metadata": "data/processed/metadata/metadata_with_split.csv",
+    "variant": "gray",
+    "feature_dim": 1024,
+    "input": "grayscale image resized to 32x32"
+  }
+}

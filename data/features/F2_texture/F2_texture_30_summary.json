@@ -1,0 +1,77 @@
+{
+  "num_features": 30,
+  "num_feature_group_entries": 30,
+  "feature_groups": [
+    "texture_glcm",
+    "texture_lbp"
+  ],
+  "train": {
+    "shape": [
+      8581,
+      30
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0013330026995390654,
+    "max": 88.09375
+  },
+  "validation": {
+    "shape": [
+      1839,
+      30
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0017670035595074296,
+    "max": 79.3360824584961
+  },
+  "test": {
+    "shape": [
+      1839,
+      30
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0011625023325905204,
+    "max": 66.12812042236328
+  },
+  "output_path": "data/features/F2_texture/F2_texture_30.npz",
+  "elapsed_seconds": 68.897,
+  "params": {
+    "feature_id": "F2_texture",
+    "feature_dim": 30,
+    "gray_levels": 32,
+    "glcm_distance": 1,
+    "glcm_directions": {
+      "0deg": [
+        0,
+        1
+      ],
+      "45deg": [
+        -1,
+        1
+      ],
+      "90deg": [
+        -1,
+        0
+      ],
+      "135deg": [
+        -1,
+        -1
+      ]
+    },
+    "glcm_properties": [
+      "contrast",
+      "dissimilarity",
+      "homogeneity",
+      "energy",
+      "correlation"
+    ],
+    "glcm_symmetric": true,
+    "lbp_points": 8,
+    "lbp_radius": 1,
+    "lbp_bins": 10,
+    "lbp_mapping": "uniform patterns by number of ones; non-uniform patterns in final bin",
+    "source_metadata": "data/processed/metadata/metadata_with_split.csv"
+  }
+}

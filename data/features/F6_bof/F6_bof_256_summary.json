@@ -1,0 +1,58 @@
+{
+  "num_features": 256,
+  "num_feature_group_entries": 256,
+  "feature_groups": [
+    "bof_orb",
+    "bof_sift"
+  ],
+  "train": {
+    "shape": [
+      8581,
+      256
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 1.0
+  },
+  "validation": {
+    "shape": [
+      1839,
+      256
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 0.800000011920929
+  },
+  "test": {
+    "shape": [
+      1839,
+      256
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 1.0
+  },
+  "output_path": "data/features/F6_bof/F6_bof_256.npz",
+  "params": {
+    "feature_id": "F6_bof",
+    "feature_dim": 256,
+    "parts": [
+      {
+        "name": "sift_bof",
+        "dim": 128,
+        "cache": "data/features/F6_bof/F6_sift_bof_128.npz",
+        "vocab": "data/features/F6_bof/vocab_sift_k128.npy"
+      },
+      {
+        "name": "orb_bof",
+        "dim": 128,
+        "cache": "data/features/F6_bof/F6_orb_bof_128.npz",
+        "vocab": "data/features/F6_bof/vocab_orb_k128.npy"
+      }
+    ],
+    "merge": "column-wise concatenation [SIFT-BoF, ORB-BoF]"
+  }
+}

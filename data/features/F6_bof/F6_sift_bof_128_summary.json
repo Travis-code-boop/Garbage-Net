@@ -1,0 +1,84 @@
+{
+  "num_features": 128,
+  "num_feature_group_entries": 128,
+  "feature_groups": [
+    "bof_sift"
+  ],
+  "train": {
+    "shape": [
+      8581,
+      128
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 1.0
+  },
+  "validation": {
+    "shape": [
+      1839,
+      128
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 0.800000011920929
+  },
+  "test": {
+    "shape": [
+      1839,
+      128
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 0.8006644248962402
+  },
+  "output_path": "data/features/F6_bof/F6_sift_bof_128.npz",
+  "elapsed_seconds": 130.296,
+  "vocab_collection_stats": {
+    "train_images": 8581,
+    "train_images_without_sift_descriptors": 7,
+    "train_descriptors_before_sampling": 1494593,
+    "train_descriptors_for_vocab": 100000
+  },
+  "split_descriptor_stats": {
+    "train": {
+      "images": 8581,
+      "images_without_sift_descriptors": 7,
+      "descriptors_total": 1494593
+    },
+    "validation": {
+      "images": 1839,
+      "images_without_sift_descriptors": 1,
+      "descriptors_total": 319411
+    },
+    "test": {
+      "images": 1839,
+      "images_without_sift_descriptors": 2,
+      "descriptors_total": 326500
+    }
+  },
+  "params": {
+    "feature_id": "F6_sift_bof",
+    "feature_dim": 128,
+    "opencv_version": "4.13.0",
+    "sift_nfeatures": 300,
+    "vocabulary_size": 128,
+    "vocabulary_fit_split": "train only",
+    "max_descriptors_per_image_for_vocab": 100,
+    "max_total_descriptors_for_vocab": 100000,
+    "kmeans": {
+      "implementation": "cv2.kmeans",
+      "attempts": 3,
+      "max_iter": 100,
+      "eps": 0.0001,
+      "init": "KMEANS_PP_CENTERS",
+      "compactness": 7433875806.09082
+    },
+    "histogram_normalization": "L1",
+    "empty_descriptor_policy": "all-zero histogram",
+    "vocabulary_path": "data/features/F6_bof/vocab_sift_k128.npy",
+    "source_metadata": "data/processed/metadata/metadata_with_split.csv"
+  }
+}

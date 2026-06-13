@@ -1,0 +1,29 @@
+combo_id,feature_id,model,fixed_validation_macro_f1,fixed_minority_recall_mean,fixed_train_seconds,selected_for_tuning,selection_reasons,exclusion_reasons
+C3,F3_hog,KNN,0.516251424135531,0.43441618535319737,0.0416,True,top8_macro_f1; macro_f1_at_least_0.40,
+C5,F5_gist,KNN,0.5036565701252925,0.4983697313733753,0.0025,True,top8_macro_f1; macro_f1_at_least_0.40; minority_recall_helpful,
+C2,F2_texture,LogisticRegression,0.49561550295566026,0.5554766449352603,0.1889,True,top8_macro_f1; macro_f1_at_least_0.40; minority_recall_helpful,
+C2,F2_texture,KNN,0.4941934805543344,0.5174206555778654,0.0016,True,top8_macro_f1; macro_f1_at_least_0.40; minority_recall_helpful,
+C1,F1_color,KNN,0.48159034588280064,0.5470137907670443,0.0245,True,top8_macro_f1; macro_f1_at_least_0.40; minority_recall_helpful,
+C1,F1_color,LogisticRegression,0.4617526387937526,0.5210174925427398,0.8731,True,top8_macro_f1; macro_f1_at_least_0.40; minority_recall_helpful,
+C3,F3_hog,LogisticRegression,0.43601596613264687,0.3486217495847897,3.5434,True,top8_macro_f1; macro_f1_at_least_0.40,
+C6,F6_bof,LogisticRegression,0.4235195516603505,0.44723193112053083,0.1376,True,top8_macro_f1; macro_f1_at_least_0.40,
+C1,F1_color,DecisionTree,0.4175805482016609,0.4380435950191286,1.3904,True,macro_f1_at_least_0.40,
+C1,F1_color,LinearSVM_SGD,0.4166090844194553,0.39433206911083013,10.1223,True,macro_f1_at_least_0.40,
+C3,F3_hog,LinearSVM_SGD,0.41476971096976867,0.30644422960924783,25.1287,False,macro_f1_at_least_0.40,linear_svm_fixed_run_too_slow_for_gain
+C0,F0_pixels_gray,KNN,0.40487136430309334,0.3152710641778836,0.0337,True,macro_f1_at_least_0.40,
+C5,F5_gist,LogisticRegression,0.4018267905667493,0.3401270832816903,0.0732,True,macro_f1_at_least_0.40,
+C2,F2_texture,DecisionTree,0.385490918309248,0.4844521289341695,0.189,True,minority_recall_helpful; low_dim_tree_candidate,
+C2,F2_texture,LinearSVM_SGD,0.3794966034072652,0.3980462391446254,0.0838,False,,
+C6,F6_bof,KNN,0.374272145431293,0.4356572717582608,0.0068,True,bof_knn_histogram_candidate,
+C3,F3_hog,DecisionTree,0.33420343755040915,0.325121671087314,9.0294,False,,
+C5,F5_gist,DecisionTree,0.33098510383000673,0.2956665261974996,0.3714,False,,
+C6,F6_bof,LinearSVM_SGD,0.3282855313746147,0.36178494996818794,0.864,False,,
+C0,F0_pixels_gray,DecisionTree,0.32682544343466435,0.2632462424497823,3.3844,False,,
+C4,F4_shape,KNN,0.29361104646402797,0.2683568412615784,0.0044,False,,shape_feature_best_fixed_result_is_weak
+C5,F5_gist,LinearSVM_SGD,0.283272586776559,0.16291613990729034,0.1324,False,,
+C0,F0_pixels_gray,LogisticRegression,0.2733729081985205,0.22530841245052594,4.7094,False,,
+C4,F4_shape,DecisionTree,0.26940572931759643,0.26617998231741075,0.0745,False,,shape_feature_best_fixed_result_is_weak
+C0,F0_pixels_gray,LinearSVM_SGD,0.2277488340253852,0.21650223511233402,9.2826,False,,
+C6,F6_bof,DecisionTree,0.21806401351544052,0.2009638663725077,0.9915,False,,
+C4,F4_shape,LogisticRegression,0.18504439519356577,0.17086586847128235,0.0386,False,,shape_feature_best_fixed_result_is_weak
+C4,F4_shape,LinearSVM_SGD,0.14420638525986165,0.07192021351313387,0.0401,False,,shape_feature_best_fixed_result_is_weak

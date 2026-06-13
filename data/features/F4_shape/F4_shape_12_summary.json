@@ -1,0 +1,64 @@
+{
+  "num_features": 12,
+  "num_feature_group_entries": 12,
+  "feature_groups": [
+    "shape_geometry",
+    "shape_hu"
+  ],
+  "train": {
+    "shape": [
+      8581,
+      12
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": -16.121549606323242,
+    "max": 45.880859375
+  },
+  "validation": {
+    "shape": [
+      1839,
+      12
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": -15.99924373626709,
+    "max": 36.515625
+  },
+  "test": {
+    "shape": [
+      1839,
+      12
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": -14.988490104675293,
+    "max": 25.068359375
+  },
+  "output_path": "data/features/F4_shape/F4_shape_12.npz",
+  "elapsed_seconds": 81.596,
+  "component_failures": {
+    "train": 0,
+    "validation": 0,
+    "test": 0
+  },
+  "params": {
+    "feature_id": "F4_shape",
+    "feature_dim": 12,
+    "foreground_mask": "Otsu threshold with light/dark foreground heuristic",
+    "component": "full binary foreground mask used as fast body approximation",
+    "min_component_pixels": 10,
+    "geometry_features": [
+      "area_ratio",
+      "perimeter_norm",
+      "aspect_ratio",
+      "extent",
+      "solidity"
+    ],
+    "perimeter": "4-connected pixel-edge perimeter normalized by 2*(height+width)",
+    "solidity": "area / max(convex_hull_area_of_boundary_points, area)",
+    "hu_moments": "seven binary Hu moments transformed as -sign(hu)*log10(abs(hu)+eps)",
+    "hu_eps": 1e-30,
+    "source_metadata": "data/processed/metadata/metadata_with_split.csv"
+  }
+}

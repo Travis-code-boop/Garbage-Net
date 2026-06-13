@@ -1,0 +1,31 @@
+base_id,fold_index,combo_id,feature_ids,output_type,fit_samples,holdout_samples,feature_dim_raw,fit_seconds,predict_seconds,holdout_macro_f1,holdout_minority_recall_mean,warnings
+lr_c11_balanced,1,C11_full,F1_color+F2_texture+F4_shape+F5_gist+F3_hog+F6_bof,proba,8336,2084,3165,1.732,0.0217,0.665487804,0.6373348494,
+lr_c11_balanced,2,C11_full,F1_color+F2_texture+F4_shape+F5_gist+F3_hog+F6_bof,proba,8336,2084,3165,1.4938,0.0206,0.6687341824,0.7157366118,
+lr_c11_balanced,3,C11_full,F1_color+F2_texture+F4_shape+F5_gist+F3_hog+F6_bof,proba,8336,2084,3165,1.5375,0.0217,0.6469481574,0.6759412357,
+lr_c11_balanced,4,C11_full,F1_color+F2_texture+F4_shape+F5_gist+F3_hog+F6_bof,proba,8336,2084,3165,1.4912,0.0139,0.6597676692,0.6796954577,
+lr_c11_balanced,5,C11_full,F1_color+F2_texture+F4_shape+F5_gist+F3_hog+F6_bof,proba,8336,2084,3165,1.5118,0.0168,0.6555650581,0.6742424242,
+sgd_svm_hct_balanced,1,hog_color_texture,F3_hog+F1_color+F2_texture,decision,8336,2084,2833,87.9252,0.0416,0.6118091702,0.5643556929,Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+sgd_svm_hct_balanced,2,hog_color_texture,F3_hog+F1_color+F2_texture,decision,8336,2084,2833,106.4325,0.0326,0.6276511176,0.6001188354,Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+sgd_svm_hct_balanced,3,hog_color_texture,F3_hog+F1_color+F2_texture,decision,8336,2084,2833,90.5549,0.0172,0.601262049,0.5973733051,Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+sgd_svm_hct_balanced,4,hog_color_texture,F3_hog+F1_color+F2_texture,decision,8336,2084,2833,89.6302,0.0174,0.6188964511,0.6024935542,Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+sgd_svm_hct_balanced,5,hog_color_texture,F3_hog+F1_color+F2_texture,decision,8336,2084,2833,91.2221,0.0131,0.6148636213,0.6103736949,Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+rf_lowdim_balanced,1,lowdim_color_texture_gist,F1_color+F2_texture+F5_gist,proba,8336,2084,1133,1.8648,0.0301,0.6676776248,0.6757865937,
+rf_lowdim_balanced,2,lowdim_color_texture_gist,F1_color+F2_texture+F5_gist,proba,8336,2084,1133,2.5192,0.0518,0.6874174427,0.7309858404,
+rf_lowdim_balanced,3,lowdim_color_texture_gist,F1_color+F2_texture+F5_gist,proba,8336,2084,1133,2.7273,0.0358,0.6913350283,0.7267326682,
+rf_lowdim_balanced,4,lowdim_color_texture_gist,F1_color+F2_texture+F5_gist,proba,8336,2084,1133,2.4816,0.0304,0.6825421657,0.697218376,
+rf_lowdim_balanced,5,lowdim_color_texture_gist,F1_color+F2_texture+F5_gist,proba,8336,2084,1133,2.4924,0.0315,0.6707325255,0.7005287911,
+knn_compact_gist_texture_shape,1,gist_texture_shape,F5_gist+F2_texture+F4_shape,proba,8336,2084,106,0.0091,0.144,0.548168042,0.500782695,
+knn_compact_gist_texture_shape,2,gist_texture_shape,F5_gist+F2_texture+F4_shape,proba,8336,2084,106,0.01,0.0265,0.5302959924,0.4996890934,
+knn_compact_gist_texture_shape,3,gist_texture_shape,F5_gist+F2_texture+F4_shape,proba,8336,2084,106,0.0102,0.0315,0.5384124635,0.5465437641,
+knn_compact_gist_texture_shape,4,gist_texture_shape,F5_gist+F2_texture+F4_shape,proba,8336,2084,106,0.01,0.0276,0.5380528376,0.5451640884,
+knn_compact_gist_texture_shape,5,gist_texture_shape,F5_gist+F2_texture+F4_shape,proba,8336,2084,106,0.0097,0.0275,0.5302748868,0.512107684,
+lgbm_small_hct_sqrt,1,hog_color_texture,F3_hog+F1_color+F2_texture,proba,8336,2084,2833,94.2145,0.1208,0.7656468501,0.7202077448,
+lgbm_small_hct_sqrt,2,hog_color_texture,F3_hog+F1_color+F2_texture,proba,8336,2084,2833,93.6092,0.1652,0.7847563728,0.7603452939,
+lgbm_small_hct_sqrt,3,hog_color_texture,F3_hog+F1_color+F2_texture,proba,8336,2084,2833,121.799,0.2532,0.7653805108,0.7502293616,
+lgbm_small_hct_sqrt,4,hog_color_texture,F3_hog+F1_color+F2_texture,proba,8336,2084,2833,123.862,0.1888,0.7646374555,0.704151547,
+lgbm_small_hct_sqrt,5,hog_color_texture,F3_hog+F1_color+F2_texture,proba,8336,2084,2833,125.8682,0.2049,0.7540977034,0.7528806977,
+lgbm_anchor_c11_sqrt,1,C11_full,F1_color+F2_texture+F4_shape+F5_gist+F3_hog+F6_bof,proba,8336,2084,3165,225.0636,0.3065,0.7858987522,0.7348726665,
+lgbm_anchor_c11_sqrt,2,C11_full,F1_color+F2_texture+F4_shape+F5_gist+F3_hog+F6_bof,proba,8336,2084,3165,197.5616,0.2691,0.7998267873,0.7761334273,
+lgbm_anchor_c11_sqrt,3,C11_full,F1_color+F2_texture+F4_shape+F5_gist+F3_hog+F6_bof,proba,8336,2084,3165,211.0448,0.3793,0.7945431831,0.7757790757,
+lgbm_anchor_c11_sqrt,4,C11_full,F1_color+F2_texture+F4_shape+F5_gist+F3_hog+F6_bof,proba,8336,2084,3165,204.6549,0.3112,0.7768083214,0.7095568341,
+lgbm_anchor_c11_sqrt,5,C11_full,F1_color+F2_texture+F4_shape+F5_gist+F3_hog+F6_bof,proba,8336,2084,3165,188.7384,0.3004,0.7721126632,0.7615725267,

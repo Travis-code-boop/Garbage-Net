@@ -1,0 +1,71 @@
+{
+  "num_features": 1039,
+  "num_feature_group_entries": 1039,
+  "feature_groups": [
+    "color_bgr_hist",
+    "color_hsv_hist",
+    "color_hsv_stats"
+  ],
+  "train": {
+    "shape": [
+      8581,
+      1039
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": -15.450390815734863,
+    "max": 16107.4931640625
+  },
+  "validation": {
+    "shape": [
+      1839,
+      1039
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": -9.683126449584961,
+    "max": 5270.134765625
+  },
+  "test": {
+    "shape": [
+      1839,
+      1039
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": -10.175334930419922,
+    "max": 2872.238037109375
+  },
+  "output_path": "data/features/F1_color/F1_color_1039.npz",
+  "elapsed_seconds": 99.17,
+  "params": {
+    "feature_id": "F1_color",
+    "feature_dim": 1039,
+    "hsv_stat_channels": [
+      "H",
+      "S",
+      "V"
+    ],
+    "hsv_stat_names": [
+      "mean",
+      "std",
+      "skewness",
+      "kurtosis_excess",
+      "entropy_norm"
+    ],
+    "hist_bins": [
+      8,
+      8,
+      8
+    ],
+    "hist_spaces": [
+      "HSV",
+      "BGR"
+    ],
+    "hist_normalization": "sum_to_one_per_image",
+    "stats_value_scale": "channel_values_divided_by_255_for moments",
+    "min_std_for_skewness_kurtosis": "only zero-variance guard",
+    "entropy": "256-bin entropy normalized by log2(256)",
+    "source_metadata": "data/processed/metadata/metadata_with_split.csv"
+  }
+}

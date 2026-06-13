@@ -1,0 +1,88 @@
+{
+  "num_features": 128,
+  "num_feature_group_entries": 128,
+  "feature_groups": [
+    "bof_orb"
+  ],
+  "train": {
+    "shape": [
+      8581,
+      128
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 1.0
+  },
+  "validation": {
+    "shape": [
+      1839,
+      128
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 0.6666666865348816
+  },
+  "test": {
+    "shape": [
+      1839,
+      128
+    ],
+    "nan_count": 0,
+    "inf_count": 0,
+    "min": 0.0,
+    "max": 1.0
+  },
+  "output_path": "data/features/F6_bof/F6_orb_bof_128.npz",
+  "elapsed_seconds": 48.672,
+  "vocab_collection_stats": {
+    "train_images": 8581,
+    "train_images_without_orb_descriptors": 8,
+    "train_descriptors_before_sampling": 3004171,
+    "train_descriptors_for_vocab": 100000
+  },
+  "split_descriptor_stats": {
+    "train": {
+      "images": 8581,
+      "images_without_orb_descriptors": 8,
+      "descriptors_total": 3004171
+    },
+    "validation": {
+      "images": 1839,
+      "images_without_orb_descriptors": 1,
+      "descriptors_total": 640364
+    },
+    "test": {
+      "images": 1839,
+      "images_without_orb_descriptors": 2,
+      "descriptors_total": 639114
+    }
+  },
+  "params": {
+    "feature_id": "F6_orb_bof",
+    "feature_dim": 128,
+    "opencv_version": "4.13.0",
+    "orb_nfeatures": 500,
+    "orb_scale_factor": 1.2,
+    "orb_nlevels": 8,
+    "descriptor_dim": 32,
+    "descriptor_note": "ORB binary descriptors converted to float32 for k-means",
+    "vocabulary_size": 128,
+    "vocabulary_fit_split": "train only",
+    "max_descriptors_per_image_for_vocab": 100,
+    "max_total_descriptors_for_vocab": 100000,
+    "kmeans": {
+      "implementation": "cv2.kmeans",
+      "attempts": 3,
+      "max_iter": 100,
+      "eps": 0.0001,
+      "init": "KMEANS_PP_CENTERS",
+      "compactness": 10032607831.894531
+    },
+    "histogram_normalization": "L1",
+    "empty_descriptor_policy": "all-zero histogram",
+    "vocabulary_path": "data/features/F6_bof/vocab_orb_k128.npy",
+    "source_metadata": "data/processed/metadata/metadata_with_split.csv"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "data_dir": "data/garbage-classification-v2/standardized_256",
+  "total_files": 12259,
+  "readable_files": 12259,
+  "unreadable_files": 0,
+  "num_classes": 10,
+  "class_counts": {
+    "battery": 756,
+    "biological": 699,
+    "cardboard": 1411,
+    "clothes": 1892,
+    "glass": 1736,
+    "metal": 930,
+    "paper": 1336,
+    "plastic": 1597,
+    "shoes": 1449,
+    "trash": 453
+  },
+  "size_counts": {
+    "256x256": 12259
+  },
+  "mode_counts": {
+    "RGB": 12259
+  },
+  "extension_counts": {
+    ".jpeg": 1,
+    ".jpg": 12258
+  }
+}

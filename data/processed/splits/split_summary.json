@@ -1,0 +1,127 @@
+{
+  "random_seed": 42,
+  "target_ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "split_totals": {
+    "validation": 1839,
+    "train": 8581,
+    "test": 1839
+  },
+  "label_totals": {
+    "battery": 756,
+    "biological": 699,
+    "cardboard": 1411,
+    "clothes": 1892,
+    "glass": 1736,
+    "metal": 930,
+    "paper": 1336,
+    "plastic": 1597,
+    "shoes": 1449,
+    "trash": 453
+  },
+  "per_label": [
+    {
+      "label": "battery",
+      "total": 756,
+      "train_count": 530,
+      "train_ratio": 0.7011,
+      "validation_count": 113,
+      "validation_ratio": 0.1495,
+      "test_count": 113,
+      "test_ratio": 0.1495
+    },
+    {
+      "label": "biological",
+      "total": 699,
+      "train_count": 489,
+      "train_ratio": 0.6996,
+      "validation_count": 105,
+      "validation_ratio": 0.1502,
+      "test_count": 105,
+      "test_ratio": 0.1502
+    },
+    {
+      "label": "cardboard",
+      "total": 1411,
+      "train_count": 987,
+      "train_ratio": 0.6995,
+      "validation_count": 212,
+      "validation_ratio": 0.1502,
+      "test_count": 212,
+      "test_ratio": 0.1502
+    },
+    {
+      "label": "clothes",
+      "total": 1892,
+      "train_count": 1324,
+      "train_ratio": 0.6998,
+      "validation_count": 284,
+      "validation_ratio": 0.1501,
+      "test_count": 284,
+      "test_ratio": 0.1501
+    },
+    {
+      "label": "glass",
+      "total": 1736,
+      "train_count": 1216,
+      "train_ratio": 0.7005,
+      "validation_count": 260,
+      "validation_ratio": 0.1498,
+      "test_count": 260,
+      "test_ratio": 0.1498
+    },
+    {
+      "label": "metal",
+      "total": 930,
+      "train_count": 650,
+      "train_ratio": 0.6989,
+      "validation_count": 140,
+      "validation_ratio": 0.1505,
+      "test_count": 140,
+      "test_ratio": 0.1505
+    },
+    {
+      "label": "paper",
+      "total": 1336,
+      "train_count": 936,
+      "train_ratio": 0.7006,
+      "validation_count": 200,
+      "validation_ratio": 0.1497,
+      "test_count": 200,
+      "test_ratio": 0.1497
+    },
+    {
+      "label": "plastic",
+      "total": 1597,
+      "train_count": 1117,
+      "train_ratio": 0.6994,
+      "validation_count": 240,
+      "validation_ratio": 0.1503,
+      "test_count": 240,
+      "test_ratio": 0.1503
+    },
+    {
+      "label": "shoes",
+      "total": 1449,
+      "train_count": 1015,
+      "train_ratio": 0.7005,
+      "validation_count": 217,
+      "validation_ratio": 0.1498,
+      "test_count": 217,
+      "test_ratio": 0.1498
+    },
+    {
+      "label": "trash",
+      "total": 453,
+      "train_count": 317,
+      "train_ratio": 0.6998,
+      "validation_count": 68,
+      "validation_ratio": 0.1501,
+      "test_count": 68,
+      "test_ratio": 0.1501
+    }
+  ]
+}

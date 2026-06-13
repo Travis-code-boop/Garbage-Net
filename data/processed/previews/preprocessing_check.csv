@@ -1,0 +1,11 @@
+image_id,label,path,rgb_shape,hsv_shape,gray_shape,gray_128_shape,mask_shape,mask_foreground_ratio,rgb_dtype,gray_dtype
+img_000002,battery,data/garbage-classification-v2/standardized_256/battery/battery_10.jpg,256x256x3,256x256x3,256x256,128x128,256x256,0.1918,uint8,uint8
+img_000757,biological,data/garbage-classification-v2/standardized_256/biological/biological_1.jpg,256x256x3,256x256x3,256x256,128x128,256x256,0.435,uint8,uint8
+img_001456,cardboard,data/garbage-classification-v2/standardized_256/cardboard/cardboard_1.jpg,256x256x3,256x256x3,256x256,128x128,256x256,0.3024,uint8,uint8
+img_002867,clothes,data/garbage-classification-v2/standardized_256/clothes/clothes_1.jpg,256x256x3,256x256x3,256x256,128x128,256x256,0.2477,uint8,uint8
+img_004760,glass,data/garbage-classification-v2/standardized_256/glass/glass_10.jpg,256x256x3,256x256x3,256x256,128x128,256x256,0.4336,uint8,uint8
+img_006495,metal,data/garbage-classification-v2/standardized_256/metal/metal_1.jpg,256x256x3,256x256x3,256x256,128x128,256x256,0.1127,uint8,uint8
+img_007425,paper,data/garbage-classification-v2/standardized_256/paper/paper_1.jpg,256x256x3,256x256x3,256x256,128x128,256x256,0.3283,uint8,uint8
+img_008761,plastic,data/garbage-classification-v2/standardized_256/plastic/plastic_1.jpg,256x256x3,256x256x3,256x256,128x128,256x256,0.3363,uint8,uint8
+img_010358,shoes,data/garbage-classification-v2/standardized_256/shoes/shoes_1.jpg,256x256x3,256x256x3,256x256,128x128,256x256,0.4274,uint8,uint8
+img_011808,trash,data/garbage-classification-v2/standardized_256/trash/trash_10.jpg,256x256x3,256x256x3,256x256,128x128,256x256,0.0417,uint8,uint8

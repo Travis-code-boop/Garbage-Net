@@ -1,0 +1,816 @@
+{
+  "status_counts": {
+    "ok": 10
+  },
+  "num_feature_caches": 10,
+  "report_csv": "data/processed/feature_reports/feature_extraction_report.csv",
+  "features": [
+    {
+      "feature_id": "F0_pixels_gray",
+      "planned_role": "C0 primary raw-pixel baseline",
+      "path": "data/features/F0_pixels/F0_pixels_gray_1024.npz",
+      "expected_dim": 1024,
+      "actual_dim": 1024,
+      "dim_ok": true,
+      "split_dim_ok": true,
+      "feature_groups": [
+        "pixel_gray"
+      ],
+      "label_names": [
+        "battery",
+        "biological",
+        "cardboard",
+        "clothes",
+        "glass",
+        "metal",
+        "paper",
+        "plastic",
+        "shoes",
+        "trash"
+      ],
+      "split_details": {
+        "train": {
+          "shape": [
+            8581,
+            1024
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "validation": {
+          "shape": [
+            1839,
+            1024
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "test": {
+          "shape": [
+            1839,
+            1024
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "params": {
+        "feature_id": "F0_pixels",
+        "pixel_size": [
+          32,
+          32
+        ],
+        "value_scale": "uint8 divided by 255",
+        "source_metadata": "data/processed/metadata/metadata_with_split.csv",
+        "variant": "gray",
+        "feature_dim": 1024,
+        "input": "grayscale image resized to 32x32"
+      },
+      "status": "ok"
+    },
+    {
+      "feature_id": "F0_pixels_rgb",
+      "planned_role": "optional raw-pixel baseline",
+      "path": "data/features/F0_pixels/F0_pixels_rgb_3072.npz",
+      "expected_dim": 3072,
+      "actual_dim": 3072,
+      "dim_ok": true,
+      "split_dim_ok": true,
+      "feature_groups": [
+        "pixel_rgb"
+      ],
+      "label_names": [
+        "battery",
+        "biological",
+        "cardboard",
+        "clothes",
+        "glass",
+        "metal",
+        "paper",
+        "plastic",
+        "shoes",
+        "trash"
+      ],
+      "split_details": {
+        "train": {
+          "shape": [
+            8581,
+            3072
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "validation": {
+          "shape": [
+            1839,
+            3072
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "test": {
+          "shape": [
+            1839,
+            3072
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "params": {
+        "feature_id": "F0_pixels",
+        "pixel_size": [
+          32,
+          32
+        ],
+        "value_scale": "uint8 divided by 255",
+        "source_metadata": "data/processed/metadata/metadata_with_split.csv",
+        "variant": "rgb",
+        "feature_dim": 3072,
+        "input": "RGB image resized to 32x32"
+      },
+      "status": "ok"
+    },
+    {
+      "feature_id": "F1_color",
+      "planned_role": "C1 color feature group",
+      "path": "data/features/F1_color/F1_color_1039.npz",
+      "expected_dim": 1039,
+      "actual_dim": 1039,
+      "dim_ok": true,
+      "split_dim_ok": true,
+      "feature_groups": [
+        "color_bgr_hist",
+        "color_hsv_hist",
+        "color_hsv_stats"
+      ],
+      "label_names": [
+        "battery",
+        "biological",
+        "cardboard",
+        "clothes",
+        "glass",
+        "metal",
+        "paper",
+        "plastic",
+        "shoes",
+        "trash"
+      ],
+      "split_details": {
+        "train": {
+          "shape": [
+            8581,
+            1039
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": -15.450390815734863,
+          "max": 16107.4931640625
+        },
+        "validation": {
+          "shape": [
+            1839,
+            1039
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": -9.683126449584961,
+          "max": 5270.134765625
+        },
+        "test": {
+          "shape": [
+            1839,
+            1039
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": -10.175334930419922,
+          "max": 2872.238037109375
+        }
+      },
+      "params": {
+        "feature_id": "F1_color",
+        "feature_dim": 1039,
+        "hsv_stat_channels": [
+          "H",
+          "S",
+          "V"
+        ],
+        "hsv_stat_names": [
+          "mean",
+          "std",
+          "skewness",
+          "kurtosis_excess",
+          "entropy_norm"
+        ],
+        "hist_bins": [
+          8,
+          8,
+          8
+        ],
+        "hist_spaces": [
+          "HSV",
+          "BGR"
+        ],
+        "hist_normalization": "sum_to_one_per_image",
+        "stats_value_scale": "channel_values_divided_by_255_for moments",
+        "min_std_for_skewness_kurtosis": "only zero-variance guard",
+        "entropy": "256-bin entropy normalized by log2(256)",
+        "source_metadata": "data/processed/metadata/metadata_with_split.csv"
+      },
+      "status": "ok"
+    },
+    {
+      "feature_id": "F2_texture",
+      "planned_role": "C2 texture feature group",
+      "path": "data/features/F2_texture/F2_texture_30.npz",
+      "expected_dim": 30,
+      "actual_dim": 30,
+      "dim_ok": true,
+      "split_dim_ok": true,
+      "feature_groups": [
+        "texture_glcm",
+        "texture_lbp"
+      ],
+      "label_names": [
+        "battery",
+        "biological",
+        "cardboard",
+        "clothes",
+        "glass",
+        "metal",
+        "paper",
+        "plastic",
+        "shoes",
+        "trash"
+      ],
+      "split_details": {
+        "train": {
+          "shape": [
+            8581,
+            30
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0013330026995390654,
+          "max": 88.09375
+        },
+        "validation": {
+          "shape": [
+            1839,
+            30
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0017670035595074296,
+          "max": 79.3360824584961
+        },
+        "test": {
+          "shape": [
+            1839,
+            30
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0011625023325905204,
+          "max": 66.12812042236328
+        }
+      },
+      "params": {
+        "feature_id": "F2_texture",
+        "feature_dim": 30,
+        "gray_levels": 32,
+        "glcm_distance": 1,
+        "glcm_directions": {
+          "0deg": [
+            0,
+            1
+          ],
+          "45deg": [
+            -1,
+            1
+          ],
+          "90deg": [
+            -1,
+            0
+          ],
+          "135deg": [
+            -1,
+            -1
+          ]
+        },
+        "glcm_properties": [
+          "contrast",
+          "dissimilarity",
+          "homogeneity",
+          "energy",
+          "correlation"
+        ],
+        "glcm_symmetric": true,
+        "lbp_points": 8,
+        "lbp_radius": 1,
+        "lbp_bins": 10,
+        "lbp_mapping": "uniform patterns by number of ones; non-uniform patterns in final bin",
+        "source_metadata": "data/processed/metadata/metadata_with_split.csv"
+      },
+      "status": "ok"
+    },
+    {
+      "feature_id": "F3_hog",
+      "planned_role": "C3 HOG edge feature group",
+      "path": "data/features/F3_hog/F3_hog_1764.npz",
+      "expected_dim": 1764,
+      "actual_dim": 1764,
+      "dim_ok": true,
+      "split_dim_ok": true,
+      "feature_groups": [
+        "hog"
+      ],
+      "label_names": [
+        "battery",
+        "biological",
+        "cardboard",
+        "clothes",
+        "glass",
+        "metal",
+        "paper",
+        "plastic",
+        "shoes",
+        "trash"
+      ],
+      "split_details": {
+        "train": {
+          "shape": [
+            8581,
+            1764
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "validation": {
+          "shape": [
+            1839,
+            1764
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "test": {
+          "shape": [
+            1839,
+            1764
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "params": {
+        "feature_id": "F3_hog",
+        "feature_dim": 1764,
+        "image_size": [
+          128,
+          128
+        ],
+        "orientations": 9,
+        "orientation_range": "unsigned 0-180 degrees",
+        "pixels_per_cell": [
+          16,
+          16
+        ],
+        "cells_per_block": [
+          2,
+          2
+        ],
+        "num_cells": [
+          8,
+          8
+        ],
+        "num_blocks": [
+          7,
+          7
+        ],
+        "block_normalization": "L2-Hys",
+        "l2_hys_clip": 0.2,
+        "source_metadata": "data/processed/metadata/metadata_with_split.csv"
+      },
+      "status": "ok"
+    },
+    {
+      "feature_id": "F4_shape",
+      "planned_role": "C4 shape feature group",
+      "path": "data/features/F4_shape/F4_shape_12.npz",
+      "expected_dim": 12,
+      "actual_dim": 12,
+      "dim_ok": true,
+      "split_dim_ok": true,
+      "feature_groups": [
+        "shape_geometry",
+        "shape_hu"
+      ],
+      "label_names": [
+        "battery",
+        "biological",
+        "cardboard",
+        "clothes",
+        "glass",
+        "metal",
+        "paper",
+        "plastic",
+        "shoes",
+        "trash"
+      ],
+      "split_details": {
+        "train": {
+          "shape": [
+            8581,
+            12
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": -16.121549606323242,
+          "max": 45.880859375
+        },
+        "validation": {
+          "shape": [
+            1839,
+            12
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": -15.99924373626709,
+          "max": 36.515625
+        },
+        "test": {
+          "shape": [
+            1839,
+            12
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": -14.988490104675293,
+          "max": 25.068359375
+        }
+      },
+      "params": {
+        "feature_id": "F4_shape",
+        "feature_dim": 12,
+        "foreground_mask": "Otsu threshold with light/dark foreground heuristic",
+        "component": "full binary foreground mask used as fast body approximation",
+        "min_component_pixels": 10,
+        "geometry_features": [
+          "area_ratio",
+          "perimeter_norm",
+          "aspect_ratio",
+          "extent",
+          "solidity"
+        ],
+        "perimeter": "4-connected pixel-edge perimeter normalized by 2*(height+width)",
+        "solidity": "area / max(convex_hull_area_of_boundary_points, area)",
+        "hu_moments": "seven binary Hu moments transformed as -sign(hu)*log10(abs(hu)+eps)",
+        "hu_eps": 1e-30,
+        "source_metadata": "data/processed/metadata/metadata_with_split.csv"
+      },
+      "status": "ok"
+    },
+    {
+      "feature_id": "F5_gist",
+      "planned_role": "C5 GIST global structure feature group",
+      "path": "data/features/F5_gist/F5_gist_64.npz",
+      "expected_dim": 64,
+      "actual_dim": 64,
+      "dim_ok": true,
+      "split_dim_ok": true,
+      "feature_groups": [
+        "gist"
+      ],
+      "label_names": [
+        "battery",
+        "biological",
+        "cardboard",
+        "clothes",
+        "glass",
+        "metal",
+        "paper",
+        "plastic",
+        "shoes",
+        "trash"
+      ],
+      "split_details": {
+        "train": {
+          "shape": [
+            8581,
+            64
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 4.831690603168681e-12,
+          "max": 2.2412405014038086
+        },
+        "validation": {
+          "shape": [
+            1839,
+            64
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 1.800799509510398e-10,
+          "max": 1.6969630718231201
+        },
+        "test": {
+          "shape": [
+            1839,
+            64
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 1.241460267920047e-10,
+          "max": 1.8549137115478516
+        }
+      },
+      "params": {
+        "feature_id": "F5_gist",
+        "feature_dim": 64,
+        "image_size": [
+          128,
+          128
+        ],
+        "grid_size": [
+          4,
+          4
+        ],
+        "orientations_degrees": [
+          0.0,
+          45.0,
+          90.0,
+          135.0
+        ],
+        "kernel_size": 15,
+        "sigma": 4.0,
+        "wavelength": 10.0,
+        "gamma": 0.5,
+        "psi": 0.0,
+        "kernel_normalization": "zero-mean unit-l2",
+        "pooling": "mean absolute response per grid cell",
+        "source_metadata": "data/processed/metadata/metadata_with_split.csv"
+      },
+      "status": "ok"
+    },
+    {
+      "feature_id": "F6_sift_bof",
+      "planned_role": "SIFT part of local BoF feature group",
+      "path": "data/features/F6_bof/F6_sift_bof_128.npz",
+      "expected_dim": 128,
+      "actual_dim": 128,
+      "dim_ok": true,
+      "split_dim_ok": true,
+      "feature_groups": [
+        "bof_sift"
+      ],
+      "label_names": [
+        "battery",
+        "biological",
+        "cardboard",
+        "clothes",
+        "glass",
+        "metal",
+        "paper",
+        "plastic",
+        "shoes",
+        "trash"
+      ],
+      "split_details": {
+        "train": {
+          "shape": [
+            8581,
+            128
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "validation": {
+          "shape": [
+            1839,
+            128
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 0.800000011920929
+        },
+        "test": {
+          "shape": [
+            1839,
+            128
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 0.8006644248962402
+        }
+      },
+      "params": {
+        "feature_id": "F6_sift_bof",
+        "feature_dim": 128,
+        "opencv_version": "4.13.0",
+        "sift_nfeatures": 300,
+        "vocabulary_size": 128,
+        "vocabulary_fit_split": "train only",
+        "max_descriptors_per_image_for_vocab": 100,
+        "max_total_descriptors_for_vocab": 100000,
+        "kmeans": {
+          "implementation": "cv2.kmeans",
+          "attempts": 3,
+          "max_iter": 100,
+          "eps": 0.0001,
+          "init": "KMEANS_PP_CENTERS",
+          "compactness": 7433875806.09082
+        },
+        "histogram_normalization": "L1",
+        "empty_descriptor_policy": "all-zero histogram",
+        "vocabulary_path": "data/features/F6_bof/vocab_sift_k128.npy",
+        "source_metadata": "data/processed/metadata/metadata_with_split.csv"
+      },
+      "status": "ok"
+    },
+    {
+      "feature_id": "F6_orb_bof",
+      "planned_role": "ORB part of local BoF feature group",
+      "path": "data/features/F6_bof/F6_orb_bof_128.npz",
+      "expected_dim": 128,
+      "actual_dim": 128,
+      "dim_ok": true,
+      "split_dim_ok": true,
+      "feature_groups": [
+        "bof_orb"
+      ],
+      "label_names": [
+        "battery",
+        "biological",
+        "cardboard",
+        "clothes",
+        "glass",
+        "metal",
+        "paper",
+        "plastic",
+        "shoes",
+        "trash"
+      ],
+      "split_details": {
+        "train": {
+          "shape": [
+            8581,
+            128
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "validation": {
+          "shape": [
+            1839,
+            128
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 0.6666666865348816
+        },
+        "test": {
+          "shape": [
+            1839,
+            128
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "params": {
+        "feature_id": "F6_orb_bof",
+        "feature_dim": 128,
+        "opencv_version": "4.13.0",
+        "orb_nfeatures": 500,
+        "orb_scale_factor": 1.2,
+        "orb_nlevels": 8,
+        "descriptor_dim": 32,
+        "descriptor_note": "ORB binary descriptors converted to float32 for k-means",
+        "vocabulary_size": 128,
+        "vocabulary_fit_split": "train only",
+        "max_descriptors_per_image_for_vocab": 100,
+        "max_total_descriptors_for_vocab": 100000,
+        "kmeans": {
+          "implementation": "cv2.kmeans",
+          "attempts": 3,
+          "max_iter": 100,
+          "eps": 0.0001,
+          "init": "KMEANS_PP_CENTERS",
+          "compactness": 10032607831.894531
+        },
+        "histogram_normalization": "L1",
+        "empty_descriptor_policy": "all-zero histogram",
+        "vocabulary_path": "data/features/F6_bof/vocab_orb_k128.npy",
+        "source_metadata": "data/processed/metadata/metadata_with_split.csv"
+      },
+      "status": "ok"
+    },
+    {
+      "feature_id": "F6_bof",
+      "planned_role": "C6 full local BoF feature group",
+      "path": "data/features/F6_bof/F6_bof_256.npz",
+      "expected_dim": 256,
+      "actual_dim": 256,
+      "dim_ok": true,
+      "split_dim_ok": true,
+      "feature_groups": [
+        "bof_orb",
+        "bof_sift"
+      ],
+      "label_names": [
+        "battery",
+        "biological",
+        "cardboard",
+        "clothes",
+        "glass",
+        "metal",
+        "paper",
+        "plastic",
+        "shoes",
+        "trash"
+      ],
+      "split_details": {
+        "train": {
+          "shape": [
+            8581,
+            256
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "validation": {
+          "shape": [
+            1839,
+            256
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 0.800000011920929
+        },
+        "test": {
+          "shape": [
+            1839,
+            256
+          ],
+          "nan_count": 0,
+          "inf_count": 0,
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "params": {
+        "feature_id": "F6_bof",
+        "feature_dim": 256,
+        "parts": [
+          {
+            "name": "sift_bof",
+            "dim": 128,
+            "cache": "data/features/F6_bof/F6_sift_bof_128.npz",
+            "vocab": "data/features/F6_bof/vocab_sift_k128.npy"
+          },
+          {
+            "name": "orb_bof",
+            "dim": 128,
+            "cache": "data/features/F6_bof/F6_orb_bof_128.npz",
+            "vocab": "data/features/F6_bof/vocab_orb_k128.npy"
+          }
+        ],
+        "merge": "column-wise concatenation [SIFT-BoF, ORB-BoF]"
+      },
+      "status": "ok"
+    }
+  ]
+}
